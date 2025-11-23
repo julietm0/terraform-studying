@@ -6,15 +6,14 @@ terraform {
 			version = "~> 3.0.2"
 		}	
 	}
-
+	cloud {
+		organization = "learning-org-jm"
+		workspaces {
+		name = "learn-terraform-azure"
+		}
+	}
 	required_version = ">= 1.1.0"
 }
-cloud {
-    organization = "learning-org-jm"
-		workspaces {
-			name = "learn-terraform-azure"
-    }
-  }
 
 provider "azurerm" {
 	features {}
